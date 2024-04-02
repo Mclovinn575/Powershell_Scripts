@@ -1,5 +1,6 @@
 # Made by Michael Love III
 # Made with the purpose to put in either the branch server or the subnet in order to get all computers on that subnet.
+# Will be looking into replacing stand in IP "172.24." to a variable in order for ease of changing based on networking needs.
 
 $subnet_1 = 0..31
 $subnet_2 = 32..63

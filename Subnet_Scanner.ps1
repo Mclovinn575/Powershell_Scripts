@@ -1,7 +1,8 @@
 # Made by Michael Love III
 # Made with the purpose to put in either the branch server or the subnet in order to get all computers on that subnet.
-# Will be looking into replacing stand in IP "172.24." to a variable in order for ease of changing based on networking needs.
 
+# Adjust subnets as needed. 
+# If subnet amount has changed, remember to change the 'if-else' statements accordingly.
 $subnet_1 = 0..31
 $subnet_2 = 32..63
 $subnet_3 = 64..95
@@ -11,6 +12,8 @@ $subnet_6 = 160..191
 $subnet_7 = 192..223
 $subnet_8 = 224..255
 
+# Change this based on network address portion of company IP
+$network_address = "172.24"
 
 
 # Clear Screen
@@ -30,7 +33,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 31
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -39,7 +42,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 63
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -48,7 +51,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 95
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -57,7 +60,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 127
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -66,7 +69,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 159
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -75,7 +78,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 191
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -84,7 +87,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 223
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -93,7 +96,7 @@ if ($scan_choice -eq 1) {
             $subnet_ceiling = 255
             $num = $subnet_floor
             while($num -le $subnet_ceiling){
-                Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+                Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
                 $num++
             }
         }
@@ -110,7 +113,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 31
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -119,7 +122,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 63
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -128,7 +131,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 95
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -137,7 +140,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 127
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -146,7 +149,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 159
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -155,7 +158,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 191
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -164,7 +167,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 223
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
@@ -173,7 +176,7 @@ if ($scan_choice -eq 1) {
         $subnet_ceiling = 255
         $num = $subnet_floor
         while($num -le $subnet_ceiling){
-            Resolve-DnsName 172.24.$third_octet.$num -ErrorAction SilentlyContinue
+            Resolve-DnsName "$network_address.$third_octet.$num" -ErrorAction SilentlyContinue
             $num++
         }
     }
